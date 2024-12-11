@@ -1,0 +1,74 @@
+<html>
+	<head>
+		<script language="javascript">
+			a=new Array("aaa","bbb","ccc","ddd");
+			b=new Array("xy","pq","zv","ab","pk");
+			c=new Array("a","b","c");
+			
+			function changeList(value)
+			{
+				var len=document.forms.f1.s2.length;
+				for(i=len-1;i>0;i--)
+				{
+					document.forms.f1.s2.options.remove(i);
+				}
+				if(value=="1")
+				{
+					for(i=1;i<=a.length;i++)
+					{
+						document.forms.f1.s2.options[i]=new Option(a[i-1]);
+					}
+				}
+				if(value=="2")
+				{
+					for(i=1;i<=b.length;i++)
+					{
+						document.forms.f1.s2.options[i]=new Option(b[i-1]);
+					}
+				}
+				if(value=="3")
+				{
+					for(i=1;i<=c.length;i++)
+					{
+						document.forms.f1.s2.options[i]=new Option(c[i-1]);
+					}
+				}
+			}
+			function openWin(value)
+			{
+				//mywin=window.open("","win","width=500,height=700");
+				//mywin.document.write("<h1>Employee Name="+value+"</h1>");
+				file=value+".html";
+				parent.f2.location.href=file;
+			}
+			function validate(e)
+			{
+				var a=e.s1.value;
+				var b=e.s2.value;
+				if(a=="0"||b=="0")
+				{
+					alert("Please Select any Menu");
+					return false;
+				}
+				else
+				{
+					return true;
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<form name="f1" action="hp.jpg" onsubmit="return validate(this)">
+			<select name="s1" onchange="changeList(this.value)">
+				<option value="0">Department</option>
+				<option value="1">CO</option>
+				<option value="2">Mech</option>
+				<option value="3">EnTC</option>
+			</select>
+			<select name="s2" onchange="openWin(this.value)">
+				<option value="0">Employee</option>
+			</select>
+			<input type="submit" value="Submit" name="b1">
+		</form>
+	</body>
+</html>

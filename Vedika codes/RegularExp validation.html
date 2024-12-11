@@ -1,0 +1,51 @@
+<html>
+	<head>
+		<script language="javascript">
+			function validation()
+			{
+				var a=document.forms.f1.t1.value.length;
+				var b=document.forms.f1.t2.value.length;
+				var c=document.forms.f1.t3.value.length;
+				if(a==0||b==0||c==0)
+				{
+					alert("Please fill all fields");
+				}
+				else
+				{
+					var pin=/^\d{6}$/;
+					if(pin.test(document.forms.f1.t3.value))
+					{
+						alert("Correct pin code");
+					}
+					else
+					{
+						alert("InCorrect pin code");
+					}
+					
+				}
+			}
+		</script>
+	</head>
+	<body>
+	<form name="f1">
+		<table border="1">
+		<tr>
+			<td> Name: </td>
+			<td> <input type="text" name="t1" required>
+		</tr>
+		<tr>
+			<td> Email: </td>
+			<td> <input type="text" name="t2" required>
+		</tr>
+		<tr>
+			<td> Pin Code: </td>
+			<td> <input type="text" name="t3" required>
+		</tr>
+		<tr>
+			<td>  </td>
+			<td> <input type="button" name="b1" value="Submit" onclick="validation()">
+		</tr>
+		</table>
+		</form>
+	</body>
+</html>

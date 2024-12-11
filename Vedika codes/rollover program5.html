@@ -1,0 +1,46 @@
+ <html>
+	<head>
+		<script language="javascript">
+		
+		//Write a javacsript program to design HTML Page with books information in tabular format, use rollovers to display the
+		//discount information
+ 
+			function display1()
+			{
+				document.getElementById("t1").innerHTML="10% off";
+			}
+			function display2()
+			{
+				document.getElementById("t2").innerHTML="5% off";
+			}
+			function disableRightClick()
+			{
+				alert("Right mouse click is not allowed");
+				return false;
+			}
+			document.oncontextmenu=new Function("disableRightClick();return false");
+		</script>
+	</head>
+	<body>
+		<table border="1">
+			<tr>
+				<th>Name</th>
+				<th>Author</th>
+				<th>Price</th>
+				<th>Discount</th>
+			</tr>
+			<tr>
+				<td><a onmouseover="display1()">Book1 </a> </td>
+				<td>abc</td>
+				<td>500</td>
+				<td id="t1"></td>
+			</tr>
+			<tr>
+				<td><a onmouseover="display2()">Book2 </a> </td>
+				<td>xyz</td>
+				<td>300</td>
+				<td id="t2"></td>
+			</tr>
+		</table>
+	</body>
+</html>

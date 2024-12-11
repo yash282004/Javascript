@@ -1,0 +1,27 @@
+<!-- parent.html -->
+<html>
+  <head>
+    <title>Parent Window</title>
+  </head>
+  <body>
+    <button onclick="openChildWindow()">Open Child Window</button>
+    <button onclick="scrollChildWindowTo(100, 100)">Scroll Child Window To (100, 100)</button>
+    <button onclick="scrollChildWindowBy(50, 50)">Scroll Child Window By (50, 50)</button>
+
+    <script>
+      let childWindow;
+
+      function openChildWindow() {
+        childWindow = window.open("child.html", "_blank", "width=400, height=400");
+      }
+
+      function scrollChildWindowTo(x, y) {
+        childWindow.scrollTo(x, y);
+      }
+
+      function scrollChildWindowBy(x, y) {
+        childWindow.scrollBy(x, y);
+      }
+    </script>
+  </body>
+</html>

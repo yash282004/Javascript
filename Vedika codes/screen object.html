@@ -1,0 +1,28 @@
+<html>
+   <body>
+        <script language="javascript">
+		let mywindow;
+		    function openWin(e)
+			{
+				wid = screen.width;
+				hei = screen.height;
+				x = (wid - 500) / 2;
+				y = (hei - 500) / 2;
+				
+			    mywindow = window.open("", "win1", "width=500,height=500,scrollbars=yes");
+			    mywindow.moveTo(x, y);
+			    mywindow.document.write("<h1>Here is a new window</h1><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><input type='button' name='b1' value='Click' onclick='window.scrollTo(0,0)'>");
+				
+			}
+			function scroll()
+			{
+				mywindow.scrollTo(0,0);
+				//mywindow.focus();
+			}
+		</script>
+		
+		<input type="button" name="b1" value="Open window" onclick="openWin(this.name)"> 
+		<input type="button" name="b2" value="Scroll" onclick="scroll()"> 
+		
+   </body>
+</html>

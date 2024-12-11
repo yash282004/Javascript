@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<script language="javascript" type="text/javascript">
+		a=new Array('dell.jpg','hp.jpg','lenovo.png');
+		count=0;
+		n=0;
+		function setBanner(e)
+		{
+			count=count+e;
+			if(count==a.length)
+			{
+			    count=0;
+			}
+			if(count<0)
+			{
+				count=a.length-1;
+			}
+			document.f1.im.src=a[count];
+			//count++;
+			setTimeout('setBanner(1)',2000);
+		}
+		function set()
+		{
+		   document.location.href="https://www.google.co.in";
+		}
+		</script>
+	</head>
+	<body onload="setBanner(0)">
+		<form name="f1">
+		<center>
+		<a>
+			<img height="200" width="700" name="im" onclick="set()"> <br>
+		</a>
+		<input type="button" name="b1" value="Forward" onclick="setBanner(1)">
+		<input type="button" name="b2" value="Previous" onclick="setBanner(-1)">
+		</center>
+		
+		<h1> Here is your webpage </h1>
+		</form>
+	</body>
+</html>

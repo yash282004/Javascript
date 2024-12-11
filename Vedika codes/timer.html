@@ -1,0 +1,33 @@
+<1--Write HTML code to design a form that displays two buttons START and 
+STOP. Write a JavaScript code such that when user clicks on START button, 
+real time digital clock will be displayed on screen. When user clicks on STOP 
+button, clock will stop displaying time. (Use Timer methods)  -->
+
+
+<html>
+   <head>
+       <script language="javascript" type="text/javascript">
+	       function launch()
+		   {
+		      var d=new Date();
+			  document.forms.f1.l1.value=d;
+		   }
+		   function start_t()
+		   {
+		      t=setInterval(launch,2000);
+		   }
+		   function stop_t()
+		   {
+		      clearInterval(t);
+		   }
+		   
+	   </script>
+   </head>
+<body>
+	<form name="f1">
+	<input type="label" name=l1>
+    <input type="button" name="b1" value="Start" onclick="start_t()">
+	<input type="button" name="b2" value="Stop" onclick="stop_t()">
+	</form>
+</body>
+</html>

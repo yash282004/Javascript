@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<script language="javascript" type="text/javascript">
+		a=new Array('dell.jpg','hp.jpg','lenovo.png');
+		b=new Array("https://www.dell.com/","https://www.hp.com/","https://www.lenovo.com/");
+		count=0;
+		function setBanner()
+		{
+			if(count==a.length)
+			{
+			    count=0;
+			}
+			
+			document.f1.im.src=a[count];
+			count++;
+			setTimeout('setBanner()',2000);
+		}
+		function set()
+		{
+		  // document.location.href="https://www.google.co.in";
+		  let currentCount = count - 1;
+			if (currentCount < 0) currentCount = a.length - 1;
+			document.location.href = b[currentCount]; 
+			
+		} 
+		</script>
+	</head>
+	<body onload="setBanner()">
+		<form name="f1">
+		<center>
+		<a>
+			<img height="200" width="700" name="im" onclick="set()">
+		</a>
+		</center>
+		<h1> Here is your webpage </h1>
+		</form>
+	</body>
+</html>

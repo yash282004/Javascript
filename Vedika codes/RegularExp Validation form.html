@@ -1,0 +1,109 @@
+<html>
+	<head>
+		<script language="javascript">
+			function validate()
+			{
+				with(document.forms.f1)
+				{
+					var a1=t1.value;
+					var a2=t2.value;
+					var a3=t3.value;
+					var a4=t4.value;
+					var a5=t5.value;
+					var a6=t6.value;
+					if(a1.length==0||a2.length==0||a3.length==0||a4.length==0||a5.length==0||a6.length==0)
+					{
+					   if(a1.length==0)
+					   {
+							document.getElementById("p1").innerHTML="Please Enter Name";
+					   }
+					    if(a2.length==0)
+					   {
+							document.getElementById("p2").innerHTML="Please Enter Mobile no";
+					   }
+					    if(a3.length==0)
+					   {
+							document.getElementById("p3").innerHTML="Please Enter Telephone no";
+					   }
+					    if(a4.length==0)
+					   {
+							document.getElementById("p4").innerHTML="Please Enter Email id";
+					   }
+					    if(a5.length==0)
+					   {
+							document.getElementById("p5").innerHTML="Please Enter Adhar no";
+					   }
+					    if(a6.length==0)
+					   {
+							document.getElementById("p6").innerHTML="Please Enter pin code";
+					   }
+					}
+					else
+					{
+						re1=/^[A-Z]+\s[A-Z]+\s[A-Z]+$/;
+						re2=/^[6|7|8|9]\d{9}$/;
+						re3=/^\(\d{4}\)-\(\d{7}\)$/;
+						re4=/^[a-z][a-z0-9\-\$\.]+@[a-z\.\-\$]+[a-z]{2,3}$/;
+						re5=/^\d{4}\s\d{4}\s\d{4}$/;
+						re6=/^\d{6}$/;
+						if(!re1.test(a1))
+						{
+							document.getElementById("p1").innerHTML="Please Enter Name in Capital letters";
+						}else {
+							document.getElementById("p1").innerHTML=" ";
+						}
+						if(!re2.test(a2))
+						{
+							document.getElementById("p2").innerHTML="Please Enter valid mobile no";
+						}else {
+							document.getElementById("p2").innerHTML=" ";
+						}
+						if(!re3.test(a3))
+						{
+							document.getElementById("p3").innerHTML="Please Enter valid telephone no";
+						}else {
+							document.getElementById("p3").innerHTML=" ";
+						}
+						if(!re4.test(a4))
+						{
+							document.getElementById("p4").innerHTML="Please Enter valid email";
+						}else {
+							document.getElementById("p4").innerHTML=" ";
+						}
+						if(!re5.test(a5))
+						{
+							document.getElementById("p5").innerHTML="Please Enter valid adhar no";
+						}else {
+							document.getElementById("p5").innerHTML=" ";
+						}
+						if(!re6.test(a6))
+						{
+							document.getElementById("p6").innerHTML="Please Enter valid pincode";
+						}else {
+							document.getElementById("p6").innerHTML=" ";
+						}
+						
+					}
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<form name="f1">
+			Enter Name:<input type="text" name="t1"> <br>
+			<p id="p1" style="color: red;"> </p> <br>
+			Enter Mobile no: <input type="text" name="t2"> <br>
+			<p id="p2" style="color: red;"> </p> <br>
+			Enter Telephone no: <input type="text" name="t3"> <br>
+			<p id="p3" style="color: red;"> </p> <br>
+			Enter Email id: <input type="text" name="t4"> <br>
+			<p id="p4" style="color: red;"> </p> <br>
+			Enter Adhar no: <input type="text" name="t5"> <br>
+			<p id="p5" style="color: red;"> </p> <br>
+			Enter pin code: <input type="text" name="t6"> <br>
+			<p id="p6" style="color: red;"> </p> <br>
+			<input type="button" value="submit" name="b1" onclick="validate()">
+		</form>
+	</body>
+</html>

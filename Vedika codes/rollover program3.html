@@ -1,0 +1,41 @@
+<html>
+	<html>
+	<script language="javascript">
+		function displayInfo(value)
+		{
+			if(value==1)
+			{
+				document.img.src="lenovo.png";
+				mywin=window.open("","Lenovo","height=200, width=200");
+				mywin.document.write("<h1> This Window displays information about Lenovo laptop</h1>");
+			}
+			if(value==2)
+			{
+				document.img.src="hp.jpg";
+				mywin=window.open("","HP","height=200, width=200");
+				mywin.document.write("<h1> This Window displays information about HP laptop</h1>");
+			}
+			if(value==3)
+			{
+				document.img.src="dell.jpg";
+				mywin=window.open("","Dell","height=200, width=200");
+				mywin.document.write("<h1> This Window displays information about Dell laptop</h1>");
+			}
+		}
+		</script>
+	</head>
+	<body>
+		<table>
+			<tr>
+				<td>
+				<a onmouseover="displayInfo(1)"> <b> <u> Lenovo </b> </u> </a> <br> 
+				<a onmouseover="displayInfo(2)"> <b> <u> HP <b> <u> </a> <br> 
+				<a onmouseover="displayInfo(3)"> <b> <u> Dell <b> <u> </a> <br> 
+				</td>
+				<td>
+					<img src="white.png" width="200" height="200" name="img" border="2">
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

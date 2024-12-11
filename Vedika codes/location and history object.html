@@ -1,0 +1,17 @@
+<html>
+<body>
+    <script language="javascript">
+		document.write("Full URL="+location.href+"<br>"); 
+		document.write("Host="+location.hostname+"<br>");
+		document.write("Pathname="+location.pathname+"<br>");
+		document.write("Protocol="+location.protocol+"<br>");
+		
+		
+	</script>
+	<input type="button" value="Reload" onclick="location.reload()">
+	<input type="button" value="Load new Doc" onclick="location.assign('history object.html')">
+	
+	<input type="button" value="Go forward" onclick="history.forward()">
+	<input type="button" value="Go forward 2 times" onclick="history.go(2)">
+</body>
+</html>

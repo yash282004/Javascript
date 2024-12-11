@@ -1,0 +1,40 @@
+<!--Write HTML code to design a form that displays textboxes for accepting 
+UserID and Aadhar No. and a SUBMIT button. UserID should contain 10 
+alphanumeric characters and must start with Capital Letter. Aadhar No. 
+should contain 12 digits in the format nnnn nnnn nnnn. Write JavaScript code 
+to validate the UserID and Aadhar No. when the user clicks on SUBMIT 
+button.  -->
+
+<html>
+	<head>
+		<script language="javascript">
+			function validate()
+			{
+				var a=document.forms.f1.t1.value;
+				var b=document.forms.f1.t2.value;
+				var r1=/^[A-Z]{1}[A-Za-z0-9]{9}$/;
+				var r2=/^\d{4}\s\d{4}\s\d{4}$/;
+					if(!(r1.test(a)))
+					{
+						alert("User id should be of 10 alphanumeric characters and must start with capital letter");
+					}
+					if(!(r2.test(b)))
+					{
+						alert("Invalud adhar no");
+					}
+				
+				if((r1.test(a))&&(r2.test(b)))
+				{
+					alert("Valid Credentials");
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<form name="f1">
+			User Id:<input type="text" name="t1" required>
+			Adhar no: <input type="text" name="t2" required>
+			<input type="button" name="b1" value="submit" onclick="validate()">
+		</form>
+	</body>
+</html>
