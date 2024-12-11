@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<script language="javascript">
+			var i;
+			function show(){
+				i=setInterval(display,1000);
+			}
+			function display(){
+				var d=new Date();
+				var sec=d.getSeconds();
+				var min=d.getMinutes();
+				var hr=d.getHours();
+				document.forms.f1.t1.value=hr+":"+min+":"+sec;
+			}
+			function stop(){
+				clearInterval(i);
+			}
+		</script>
+	</head>
+	<body>
+		<form name="f1">
+			<center>
+				<input type="text" name="t1">
+				<br>
+				<input type="button" value="Start" onclick="show()">
+				<input type="button" value="Stop" onclick="stop()">
+			</center>
+			
+		</form>
+	</body>
+</html>
+			

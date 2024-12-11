@@ -1,0 +1,25 @@
+<html>
+	<body>
+		<script language="javascript">
+			var students=[['Sumit',80],['Kalpesh',77],['Amit',88],['Tejas',93],['Abhishek',65]];
+			var avgmarks=0,total=0;
+			for(var i=0;i<students.length;i++){
+				total=total+students[i][1];
+			}
+			avgmarks=total/students.length;
+			alert("Average Marks = "+avgmarks);
+			if(avgmarks<60)
+				alert('Grade : E');
+			else if(avgmarks<70)
+				alert('Grade : D');
+			else if(avgmarks<80)
+				alert('Grade : C');
+			else if(avgmarks<90)
+				alert('Grade : B')
+			else if(avgmarks<100)
+				alert('Grade : A');
+			else
+				alert('Invalid Input');
+		</script>
+	</body>
+</html>

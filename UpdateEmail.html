@@ -1,0 +1,30 @@
+
+<html>
+<head>
+    
+    <script>
+        function updateEmail() {
+            with (window.document.forms.f1) {
+                var generatedEmail = firstName.value + lastName.value + "@gmail.com";
+                
+                email.value = generatedEmail.toLowerCase(); // Convert to lowercase
+            }
+        }
+    </script>
+</head>
+<body>
+   
+    <form name="f1">
+        First Name: <input type="text"  name="firstName" oninput="updateEmail()">
+        <br><br>
+
+        Last Name: <input type="text" name="lastName" oninput="updateEmail()">
+        <br><br>
+
+        Email: <input type="text" name="email" readonly>
+        <br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

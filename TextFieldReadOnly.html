@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <script language="javascript" type="text/javascript">
+            function edit(){
+                document.forms.f1.t1.readOnly=false;
+            }
+            function enableReadOnly(){
+                document.forms.f1.t1.readOnly=true;
+            }
+        </script>
+    </head>
+    <body>
+        <form name="f1">
+            Enter Name:<input type="text" name="t1" value="anonymous">
+            <br>
+            <input type="button" name="b1" value="edit" onclick="edit()">
+            <input type="button" name="b2" value="Read-Only" onclick="enableReadOnly()">
+        </form>
+    </body>
+</html>

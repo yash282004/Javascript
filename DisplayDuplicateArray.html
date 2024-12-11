@@ -1,0 +1,24 @@
+<html>
+	<body>
+		<script languge="javascript">
+			var a=[10,20,10,20,30,40,20,10];
+			var ua=[];
+			for(i=0;i<a.length;i++)
+			{
+				for(j=0;j<a.length;j++)
+				{
+					if(i!=j&&a[i]==a[j])
+					{
+						if(ua.indexOf(a[i])===-1)
+						{
+							ua.push(a[i]);
+						}
+					}
+				}
+			}
+			document.write("Orignal Array :"+a);
+			document.write("<br>");
+			document.write("duplicate element from array : "+ua);
+		</script>
+	</body>
+</html>

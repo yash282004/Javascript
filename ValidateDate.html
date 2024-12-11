@@ -1,0 +1,21 @@
+<html>
+	<body>
+		<script language="javascript">
+			let date=prompt("Enter a Date");
+			let month=prompt("Enter a Month");
+			let year=prompt("Enter a Year");
+			var regdate = /^(0?[1-9]|[12][0-9]|3[01])$/; 
+			var regmonth = /^(0?[1-9]|1[0-2])$/;         /
+			var regyear = /^\d{4}$/;
+			if(!regdate.test(date)){
+				alert("Invalid Date");
+			}
+			if(!regmonth.test(month)){
+				alert("Invalid Month");
+			}
+			if(!regyear.test(year)){
+				alert("Invalid year");
+			}
+		</script>
+	</body>
+</html>

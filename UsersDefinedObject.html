@@ -1,0 +1,23 @@
+<html>
+   <body>
+       <script language="javascript" >
+	        var student={
+			     rollno:60,
+				 name:"Yash",
+				 marks:90,
+				 get getMark() 
+				 {
+				     return this.marks;
+				 },
+				 set putMark(mk)
+				 {
+				     this.marks=mk;
+				 }
+			};
+			document.write("<br>Student Mark="+student.getMark);
+			student.putMark=95;
+			document.write("<br>New Student Mark="+student.getMark);
+			
+	   </script>
+   </body>
+</html>

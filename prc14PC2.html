@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <script language="javascript">
+             var a = ["BSC", "BMC", "EGE", "WKP"];
+            var b = ["C", "AMC", "BEC", "EEE"];
+            var c = ["C++", "DBMS", "DTE"];
+            function change(val){
+                var len=document.forms.f1.s2.length;
+                for(i=len-1;i>0;i++){
+                    document.forms.f1.s2.options.remove(i);
+                }
+                if(val==1){
+                    for(i=1;i<=a.length;i++){
+                        document.forms.f1.s2.options[i]=new Option(a[i-1]);
+                    }
+                }
+                if(val==2){
+                    for(i=1;i<=b.length;i++){
+                        document.forms.f1.s2.options[i]=new Option(b[i-1]);
+                    }
+                }
+                if(val==3){
+                    for(i=1;i<=b.length;i++){
+                        document.forms.f1.s2.options[i]=new Option(c[i-1]);
+                    }
+                }
+            }
+            function validate(e){
+                var a=e.s1.value;
+                var b=e.s2.value;
+                if(a==0||b==0){
+                    alert("Please select any menu");
+                    return false;
+                }
+                else
+                    return true
+
+            }
+        </script>
+    </head>
+    <body>
+        <form name="f1" onsubmit="return validate(this)">
+            <select name="s1" onchange="change(this.value)">
+                <option value="0">Semister</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                
+            </select>
+            <select name="s2" >
+                <option value="0">Subjects</option>
+            </select>
+            <input type="submit" value="submit" name="b1">
+        </form>
+    </body>
+</html>

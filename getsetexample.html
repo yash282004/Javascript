@@ -1,0 +1,22 @@
+<html>
+	<body>
+		<script language="javascript">
+			
+			var users={
+					firstName: "Yash",
+					lastName: "Khandagale",
+					get fullName(){
+						return this.firstName+" "+this.lastName;
+					},
+					set fullName(temp){
+						[this.firstName,this.lastName]=temp.split(" ");
+					}
+			};
+			document.write(users.fullName);
+			users.fullName="Jay khandagale"
+			document.write("<br>");
+			document.write(users.fullName);
+					
+		</script>
+	</body>
+</html>

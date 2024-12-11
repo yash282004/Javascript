@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <script language="javascript">
+            function abc(color) {
+                document.body.style.background = color;
+            }
+        </script>
+    </head>
+    <body>
+       <form name="f1">
+          <input type="radio" name="bg" value="red" onchange="abc(this.value)"> Red
+          <input type="radio" name="bg" value="green" onchange="abc(this.value)"> Green
+          <input type="radio" name="bg" value="blue" onchange="abc(this.value)"> Blue
+        </form>
+    </body>
+</html>

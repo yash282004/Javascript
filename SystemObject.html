@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Navigator and Date Example</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            // Using the Date object
+            const d = new Date();
+            var a = d.getMonth() + 1; // Months are zero-based, so we add 1
+            alert(d.getDate() + "/" + a + "/" + d.getFullYear());
+
+            document.write("<h3>Date and Time Information</h3>");
+            document.write("<br>Date: " + d.getDate());
+            document.write("<br>Month: " + a);
+            document.write("<br>Full Year: " + d.getFullYear());
+            document.write("<br>Time stamp:");
+            document.write("<br>Hours: " + d.getHours());
+            document.write("<br>Minutes: " + d.getMinutes());
+            document.write("<br>Seconds: " + d.getSeconds());
+            document.write("<br>Milliseconds: " + d.getMilliseconds());
+
+            // Using the navigator object
+            document.write("<h3>Browser Information</h3>");
+            document.write("<br>App Name: " + navigator.appName);
+            document.write("<br>App Code Name: " + navigator.appCodeName);
+            document.write("<br>App Version: " + navigator.appVersion);
+            document.write("<br>Language: " + navigator.language);
+            document.write("<br>Platform: " + navigator.platform);
+            document.write("<br>User-Agent: " + navigator.userAgent);
+        </script>
+    </body>
+</html>

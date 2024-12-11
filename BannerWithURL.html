@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <script language="javascript">
+		let links=new Array( "https://www.microsoft.com/windows","https://www.apple.com/mac","https://www.linux.org");
+            a=new Array("windows.png","mac.png","linux.jpeg");
+            count=0;
+            n=0;
+        function setBanner(e,f){
+            count=count+e;
+            if(f==1){
+                clearTimeout(i);
+            }
+            if(count==a.length){
+                count=0;
+            }
+            if(count<0)
+            {
+                count=a.length-1;
+            }
+            document.f1.imgframe.src=a[count];
+			//document.getElementById("web").href=links[count];
+            
+            i=setTimeout('setBanner(1,0)',2000)
+        }
+		function linkBanner()
+		{
+			location.href=links[count];
+		}
+        </script>
+    </head>
+    <body onload="setBanner(0,0)">
+        <form name="f1">
+            <center>
+				<a href="javascript: linkBanner()" id="web">
+                <img height="400" width="400" name="imgframe">
+				</a>
+            
+            <br>
+            <input type="button" name="b1" value="forward"
+            onclick="setBanner(1,1)">
+            <input type="button" name="b1" value="backward"
+            onclick="setBanner(-1,1)">
+            </center>
+
+        </form>
+
+    </body>
+</html>

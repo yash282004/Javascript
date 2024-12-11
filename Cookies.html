@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <script language="javascript" >
+            
+            function check(){
+                var allcookie=document.cookie;
+                var cookie_array=allcookie.split(';');
+                let nm,val;
+                for(i=0;i<cookie_array.length;i++){
+                    nm=cookie_array[i].split['='][0];
+                    val=cookie_array[i].split['='][1];
+                    window.document.forms.f1.t1.value=val;
+                }
+                
+
+            }
+            function setCookie(){
+                let str1="usermame=xyz;"
+                window.document.cookie=str1;
+                alert("Cookie is set");
+
+                
+            }
+        </script>
+    </head>
+    <body onload="check()">
+        <form name="f1">
+            Enter Name :<input type="text" name="t1" value="">
+            Enter password: <input type="text" name="t2">
+            <input type="button" name="b" value="submit" onClick="setCookie()">
+        </form>
+    </body>
+</html>

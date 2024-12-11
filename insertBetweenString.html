@@ -1,0 +1,15 @@
+<html>
+	<body>
+		<script language="javascript">
+			var str=prompt("Enter a String ");
+			var str2=prompt("Enter a new string to insert");
+			var position=parseInt(prompt("Enter a position to insert"));
+			if(position<str.length){
+				str=str.slice(0,position)+str2+str.slice(position);
+				alert(str);
+			}
+			else
+				alert("Invalid inputs");
+		</script>
+	</body>
+</html>

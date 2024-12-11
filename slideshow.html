@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<script language="javascript">
+			var pics=new Array("1.jpg","2.jpg","3.jpg");
+			var count=0;
+			function display(n)
+			{
+				count=count+n;
+				if(count==pics.length){
+					count=0;
+				}
+				if(count<0)
+				{
+					count=pics.length-1;
+				}
+				document.forms.f1.myframe.src=pics[count];
+				//setTimeout("display(1)",1000);
+				
+			}
+		</script>
+	</head>
+	<body onload="display(0)">
+		<form name="f1">
+		<center>
+			<img src="1.jpg" width="600" height="300" name="myframe">
+		<br>
+			<input type="button" value="Next" onclick="display(1)">
+			<input type="button" value="Previous" onclick="display(-1)">
+		</center>
+		</form>
+	</body>
+</html>

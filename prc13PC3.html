@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <script language="javascript">
+            function winDisplay(val){
+                if(val==1){
+                    document.img.src="windows.png";
+                    mywin=window.open("","WINDOWS","width=400 height=400")
+                    mywin.document.write("This content information about windows os"); 
+                }
+                if(val==2){
+                    document.img.src="mac.png";
+                    mywin=window.open("","MAC OS","width=400 height=400")
+                    mywin.document.write("This content information about mac os"); 
+                }
+                if(val==3){
+                    document.img.src="linux.jpeg";
+                    mywin=window.open("","LINUX","width=400 height=400")
+                    mywin.document.write("This content information about linux os"); 
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <a onmouseover="winDisplay(1)">
+            <u>WINDOWS</u>
+        </a><br>
+        <a onmouseover="winDisplay(2)">
+            <u>MAC OS</u>
+        </a><br>
+        <a onmouseover="winDisplay(3)">
+            <u>LINUX</u>
+        </a><br>
+        <img src='whitebg.jpeg' width="200" height="200" 
+        name="img" >
+    </body>
+</html>

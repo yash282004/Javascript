@@ -1,0 +1,20 @@
+<html>
+	<head>
+		<script language="javascript">
+			function changeColor(c)
+			{
+				document.body.style.background=c;
+			}
+		</script>
+	</head>
+	<body>
+		<form name="f1">
+			<select name="op" onchange="changeColor(this.value)">
+				<option value="red">Red</option>
+				<option value="green">Green</option>
+				<option value="blue">Blue</option>
+				<option value="yellow">Yellow</option>
+			</select>
+		</form>
+	</body>
+</html>

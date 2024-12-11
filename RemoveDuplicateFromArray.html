@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <script language = "javascript">
+            function removedup(arr){
+                let new_array=[]
+                for(let i in arr){
+                    if(new_array.indexOf(arr[i])===-1)
+                        new_array.push(arr[i]);
+                }
+                document.write(new_array.concat());
+            }
+        </script>
+    </head>
+    <body>
+        <script language="javascript">
+            var arr=[1,2,2,1,3,1,3,4,5,2,4,5];
+            removedup(arr);
+
+        </script>
+    </body>
+</html>

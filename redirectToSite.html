@@ -1,0 +1,23 @@
+
+<html>
+<head>
+    <script labguage="javascript">
+        function redirectToSite(tmp) {
+          
+            var site = tmp;
+           
+                window.location.href = site;
+        }
+    </script>
+</head>
+<body>
+		<form name="f1">
+			<select name="m1" onchange="redirectToSite(this.value)">
+				<option value=""> Choose a site</option>
+				<option value="https://www.google.com">Google</option>
+				<option value="https://msbte.org.in">MSBTE</option>
+				<option value="https://www.yahoo.com">Yahoo</option>
+			</select>
+		</form>
+</body>
+</html>

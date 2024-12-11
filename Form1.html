@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <script language="javascript" >
+            function validate(){
+                with(window.document.forms.f1)
+                alert("hello "+username.value);
+            }
+
+        </script>
+
+    </head>
+    <body>
+        <form name="f1">
+            <h3>Login form</h3>
+
+            
+            username : <input type="text" name="username" value=""><br>
+            password : <input type="password" name="pass" value=""><br>
+            <input type="button" onclick="validate()" value="Login">
+        </form>
+    </body>
+</html>

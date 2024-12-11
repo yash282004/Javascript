@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<script language="javascript">
+			function create_cookie(){
+				var ck=document.forms.f1.t1.value;
+				document.cookie='name='+ck+';';
+				alert('cookie is set');
+			}
+			function read_cookie(){
+				var all_cookie= document.cookie;
+				alert(all_cookie);
+			}
+			function update_cookie(){
+				var uk= document.forms.f1.t1.value;
+				document.cookie='name='+uk+';';
+				alert('cookie updated');
+			}
+			function delete_cookie(){
+				
+				var d= new Date();
+				d.setDate(d.getDate()-1);
+				document.cookie='name=;expires='+d.toUTCString()+';';
+				alert('cookie deleted');
+			}
+		</script>
+	</head>
+	<body>
+		<form name="f1">
+			Enter name :<input type="text" name="t1"/>
+			<br>
+			<input type="button" value="read" onclick="read_cookie()"/>
+			<input type="button" value="create" onclick="create_cookie()"/>
+			<input type="button" value="update" onclick="update_cookie()"/>
+			<input type="button" value="delete" onclick="delete_cookie()"/>
+		</form>
+	</body>
+</html>

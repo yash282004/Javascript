@@ -1,0 +1,23 @@
+<html>
+    <body>
+        <script langauge="javascript" type="text/javascript">
+            let name=prompt('Enter a string :');
+            let name2=[];
+            let flag=1;
+            for(i=0;i<name.length;i++){
+                name2[i]=name[name.length-1-i];
+            }
+            for(i=0;i<name.length;i++){
+                if(name[i]!=name2[i])
+                    flag=0;
+            }
+            if(flag==1){
+                document.write("String is palindrome")
+            }
+            else{
+                document.write("String is not palindrome")
+            }
+
+        </script>
+    </body>
+</html>

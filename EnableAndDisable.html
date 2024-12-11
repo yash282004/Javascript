@@ -1,0 +1,30 @@
+<html>
+   <head>
+       <script language="javascript">
+        function enable(e)
+		{
+		      with(document.forms.f1)
+			  {
+			      if(e==b1)
+				  {
+				      t1.disabled=false;
+				  }
+				 if(e==b2)
+				  {
+				      t1.disabled=true;
+				  }
+			   }
+				
+			
+		}
+		</script>
+   </head>
+   <body> 
+       <form name="f1">
+	        Enter First name:<input type="text" name="t1"> <br>
+			<input type="button" name="b1" value="Enable" onclick="enable(this)">
+			<input type="button" name="b2" value="disable" onclick="enable(this)">
+			
+	   </form>
+   </body>
+</html>

@@ -1,0 +1,34 @@
+<html>
+	<head>
+	<style>
+	    .tab_btn {
+            background:white;
+        }
+		.btn {
+			width:45px;
+			height:30px;
+			margin-right:5px;
+			color:light-gray;
+		}
+		 
+	</style>
+		<script language="javascript" type="text/javascript">
+			function display(value)
+			{
+				document.getElementById("content").innerHTML="You have selected "+value;
+			}
+		</script>
+	</head>
+	<body>
+	<nav class="tab_btn">
+		<input type="button" class="btn" name="b1" value="C" onclick="display(this.value)">
+		<input type="button" class="btn" name="b2" value="C++" onclick="display(this.value)">
+		<input type="button" class="btn" name="b3" value="Java" onclick="display(this.value)">
+		<input type="button" class="btn" name="b4" value="Python" onclick="display(this.value)">
+		</nav>
+		<hr>
+		
+		<div id="content" style="height:400px; width:400px; border:1px solid; padding:10px; margin:10px;">
+		</div>
+	</body>
+</html>

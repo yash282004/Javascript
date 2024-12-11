@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<script language="javascript">
+			var a=new Array("Green Tea","Milk Tea","Black Tea");
+			var b=new Array("Capaccino","Latte","Expression");
+			var c=new Array("Maaza","Sprite","Coca-Cola");
+			function displayList(value)
+			{
+				if(value=="tea")
+				{
+					for(i=0;i<a.length;i++)
+					{
+						document.forms.f1.s1.options[i]=new Option(a[i]);
+					}
+				}
+				if(value=="coffee")
+				{
+					for(i=0;i<b.length;i++)
+					{
+						document.forms.f1.s1.options[i]=new Option(b[i]);
+					}
+				}
+				if(value=="softDrink")
+				{
+					for(i=0;i<c.length;i++)
+					{
+						document.forms.f1.s1.options[i]=new Option(c[i]);
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<form name="f1">
+			Select Beverage:<br>
+			<input type="checkbox" name="c1" value="tea" onclick="displayList(this.value)"> Tea<br>
+			<input type="checkbox" name="c1" value="coffee" onclick="displayList(this.value)"> Coffee<br>
+			<input type="checkbox" name="c1" value="softDrink" onclick="displayList(this.value)"> Soft Drink<br>
+			<select name="s1">
+				<option value="0"> </option>
+			</select>
+		</form>
+	</body>
+</html>

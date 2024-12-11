@@ -1,0 +1,37 @@
+
+<html> 
+<body> 
+ <form name="myform"> 
+  Select your favourite Programming Language:<br> 
+  <input type="checkbox" name="c1" id="id1" value="c lang">C Lang  
+  <input type="checkbox" name="c2" id="id2" value="c++ lang">C++ Lang  
+  <input type="checkbox" name="c3" id="id3" value="java lang">Java Lang  
+  <input type="checkbox" name="c4" id="id4" value="python lang">Python Lang  
+  <input type="button" name="b1" value="Show" onclick="EvaluateChecbox()">  
+  
+ </form> 
+ <script language="javascript" type="text/javascript"> 
+  function EvaluateChecbox() 
+  { 
+   var m="You have selected: "; 
+   if(document.getElementById("id1").checked==true) 
+   { 
+    m=m+document.getElementById("id1").value+" "; 
+   } 
+   if(document.getElementById("id2").checked==true) 
+   { 
+    m=m+document.getElementById("id2").value+" "; 
+   } 
+   if(document.getElementById("id3").checked==true) 
+   { 
+    m=m+document.getElementById("id3").value+" "; 
+   } 
+   if(document.getElementById("id4").checked==true) 
+   { 
+m=m+document.getElementById("id4").value+" "; 
+} 
+alert(m); 
+} 
+</script> 
+</body> 
+</html> 

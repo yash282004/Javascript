@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <script langauge="javascript" type="text/javascript">
+            function validate(user_id,password){
+                    
+                   for(i=0;i<=users.length;i++)
+                   {
+                    if(user_id==users[i]){
+                        break;
+                    }
+                   }
+                   switch(i)
+                   {
+                    case 0: if(password==passwords[i])
+                            {
+                                alert("Login successful");
+                            }
+                            else{
+                                alert("login failed");
+                            }
+                            break;
+                    case 1: if(password==passwords[i])
+                            {
+                                alert("Login successful");
+                            }
+                            else{
+                                alert("login failed");
+                            }
+                            break;
+                    case 2: if(password==passwords[i])
+                            {
+                                alert("Login successful");
+                            }
+                            else{
+                                alert("login failed");
+                            }
+                            break;
+                    case 3: if(password==passwords[i])
+                            {
+                                alert("Login successful");
+                            }
+                            else{
+                                alert("login failed");
+                            }
+                            break;
+                    case 4: if(password==passwords[i])
+                            {
+                                alert("Login successful");
+                            }
+                            else{
+                                alert("login failed");
+                            }
+                            break;
+                    case 5: if(password==passwords[i])
+                            {
+                                alert("Login successful");
+                            }
+                            else{
+                                alert("login failed");
+                            }
+                            break;
+                    dafault :  alert("Enter valid name and password");
+
+                   }
+                   
+                   
+                             
+
+
+                
+            }
+        </script>
+
+    </head>
+    <body>
+       
+        <script langauge="javascript" type="text/javascript">
+            let users=["abc","xyz","mno","pqr","rst"];
+            let passwords=["abc@org","xyz@org","mno@org","pqr@org","rst@org"];
+            let entered_id=(prompt('Enter a user id :'));
+            let entered_password=prompt('Enter a password :');
+            validate(entered_id,entered_password);
+        </script>
+    </body>
+</html>

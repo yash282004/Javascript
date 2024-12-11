@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <script language="javascript">
+            function display(e){
+                with(document.forms.f1){
+                    if(e==1){
+                        op[0].text="Creta"
+                        op[0].value=1
+                        op[1].text="Swift"
+                        op[1].value=2
+                        op[2].text="Fortuner"
+                        op[2].value=3
+
+                    }
+                    if(e==2){
+                        op[0].text="Splendor"
+                        op[0].value=1
+                        op[1].text="Bullet"
+                        op[1].value=2
+                        op[2].text="RX100"
+                        op[2].value=3
+                    }
+                }
+
+            }
+        </script>
+    </head>
+    <body>
+        <form name="f1">
+            <input type="radio" name="group" value="1" onclick="display(this.value)">Cars
+            <input type="radio" name="group" value="2" onclick="display(this.value)">Bikes
+            <br>
+            <select name="op" >
+                <option value="1">Creta
+                <option value="2">Swift
+                <option value="3">Fortuner
+            </select>
+        </form>
+    </body>
+</html>

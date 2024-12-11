@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Splice and Slice Combined Example</title>
+    </head>
+    <body>
+        <script language="javascript" type="text/javascript">
+            let fruits = ["Apple", "Banana", "Mango", "Orange", "Watermelon"];
+            document.write("<h3>Orignal Array : </h3>" +fruits.concat()+" <br>");
+            let removedItems = fruits.splice(1, 2,"g1","g2","g3");
+            document.write("<h4>Removed Items:</h4>");
+            document.write(fruits.concat() + "<br>"); 
+            document.write(removedItems.concat() + "<br>"); 
+            document.write("<h4>Updated Fruits Array:</h4>");
+            document.write(fruits.concat() + "<br>"); 
+
+ 
+            fruits.splice(2, 0, "Fig", "Grape");
+            document.write("<h4>After Adding Items:</h4>");
+            document.write(fruits.concat() + "<br>"); 
+
+     
+            fruits.splice(1, 1, "Blackberry");
+            document.write("<h4>After Replacing Item:</h4>");
+            document.write(fruits.concat() + "<br>"); 
+
+            
+            let slicedFruits = fruits.slice(1, 3);
+            document.write("<h4>Sliced Fruits Array (index 1 to 3):</h4>");
+            document.write(slicedFruits.concat() + "<br>"); 
+
+            
+            let slicedFruits2 = fruits.slice(2);
+            document.write("<h4>Sliced Fruits Array from index 2:</h4>");
+            document.write(slicedFruits2.concat() + "<br>"); 
+
+           
+            let slicedFruits3 = fruits.slice(-2);
+            document.write("<h4>Sliced Fruits Array with last 2 elements:</h4>");
+            document.write(slicedFruits3.concat() + "<br>"); 
+        </script>
+    </body>
+</html>
